@@ -31,8 +31,8 @@ contract Vault is ReentrancyGuard {
         emit Withdraw(msg.sender, _amount);
     }
 
-    function getBalance() public view returns(uint) {
-        return userBalances[msg.sender];
+    function getBalance(address _user) public view virtual returns(uint) {
+        return userBalances[_user];
     }
 
 }

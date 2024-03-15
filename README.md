@@ -1,13 +1,18 @@
-# Sample Hardhat Project
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
 
-Try running some of the following tasks:
-
-```shell
-npx hardhat help
+To run the contract test:
 npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat run scripts/deploy.js
-```
+
+
+To deploy:
+1. Edit the hardhat.config.js
+
+module.exports = {
+  solidity: "0.8.24",
+  networks: {
+    baseSepolia: {
+      url: '',  // fill in the url with you base sepolia RPC url
+      accounts: ['']  // fill in the array with your account private key
+    }
+  }
+};

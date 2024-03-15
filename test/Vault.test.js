@@ -60,7 +60,7 @@ describe("Vault contract", function () {
       expect(vaultBalanceAfterUser1).to.equal(ethers.parseUnits("10000", 18));
 
       // check vault balance of user1 after deposit
-      const user1VaultBalance = await vault.connect(user1).getBalance();
+      const user1VaultBalance = await vault.getBalance(user1.address);
       expect(user1VaultBalance).to.equal(ethers.parseUnits("10000", 18));
     });
     it("User should be able to withdraw", async function () {

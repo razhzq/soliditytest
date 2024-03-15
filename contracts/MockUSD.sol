@@ -10,4 +10,8 @@ contract MockUSD is ERC20 {
     constructor() ERC20("MockUSD", "MUSD")  {
         _mint(msg.sender, 1000000 * PRECISION);
     }
+
+    function mint(uint amount) public {
+        _mint(msg.sender, amount);
+    }
 }
